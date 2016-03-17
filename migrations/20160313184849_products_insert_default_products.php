@@ -16,17 +16,20 @@ class ProductsInsertDefaultProducts extends AbstractMigration
             [
                 "name" => "Product nr.1",
                 "description" => "First Product",
-                "price" => 50
+                "price" => 50,
+                "technical_details" => "First Product technical details"
             ],
             [
                 "name" => "Product nr.2",
                 "description" => "Second Product",
-                "price" => 70
+                "price" => 70,
+                "technical_details" => "Second Product technical details"
             ],
             [
                 "name" => "Product nr.3",
                 "description" => "Third Product",
-                "price" => 110
+                "price" => 110,
+                "technical_details" => "Third Product technical details"
             ]
         ];
         $this->insert('products', $products);
