@@ -32,7 +32,7 @@ class ProductsInsertDefaultProducts extends AbstractMigration
                 'technical_details' => 'Third Product technical details'
             ]
         ];
-        $this->insert('products', $products);
+        $this->table('products')->insert($products)->save();
     }
 
     /**
@@ -40,6 +40,7 @@ class ProductsInsertDefaultProducts extends AbstractMigration
      */
     public function down()
     {
-        $this->execute('DELETE FROM products');
+        $this->table('products')->truncate();
+        //$this->execute('DELETE FROM products');
     }
 }
