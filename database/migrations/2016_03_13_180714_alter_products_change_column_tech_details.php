@@ -15,11 +15,11 @@ class AlterProductsChangeColumnTechDetails extends Migration
         /**
          * Change and Rename Column example
          */
-        Schema::table("products", function (Blueprint $table) {
-            $table->renameColumn("tech_details", "technical_details");
+        Schema::table('products', function (Blueprint $table) {
+            $table->renameColumn('tech_details', 'technical_details');
         });
-        Schema::table("products", function (Blueprint $table) {
-            $table->string("technical_details", 255)->change();
+        Schema::table('products', function (Blueprint $table) {
+            $table->string('technical_details', 255)->change();
         });
     }
 
@@ -30,11 +30,11 @@ class AlterProductsChangeColumnTechDetails extends Migration
      */
     public function down()
     {
-        Schema::table("products", function (Blueprint $table) {
-            $table->renameColumn("technical_details", "tech_details");
+        Schema::table('products', function (Blueprint $table) {
+            $table->renameColumn('technical_details', 'tech_details');
         });
-        Schema::table("products", function (Blueprint $table) {
-            $table->string("tech_details", 100)->change();
+        Schema::table('products', function (Blueprint $table) {
+            $table->string('tech_details', 100)->change();
         });
     }
 }

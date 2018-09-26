@@ -15,8 +15,8 @@ class AlterProductsAddColumnTechDetails extends Migration
         /**
          * Add Column example
          */
-        Schema::table("products", function (Blueprint $table) {
-            $table->addColumn("string", "tech_details", array("length" => 100));
+        Schema::table('products', function (Blueprint $table) {
+            $table->addColumn('string', 'tech_details', ['length' => 100]);
         });
     }
 
@@ -30,8 +30,8 @@ class AlterProductsAddColumnTechDetails extends Migration
         /**
          * Drop Column example
          */
-        Schema::table("products", function (Blueprint $table) {
-            $table->dropColumn("tech_details");
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('tech_details');
         });
     }
 }

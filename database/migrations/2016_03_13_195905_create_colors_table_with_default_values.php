@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 class CreateColorsTableWithDefaultValues extends Migration
@@ -15,16 +14,16 @@ class CreateColorsTableWithDefaultValues extends Migration
         /**
          * SQL statement execution example
          */
-        \DB::statement("
+        \DB::statement('
             CREATE TABLE `colors`(
                 `id` INT(11) NOT NULL AUTO_INCREMENT,
                 `name` VARCHAR(100) NOT NULL,
                 PRIMARY KEY(`id`)
             )
             ENGINE=InnoDB;
-        ");
+        ');
         \DB::statement("
-            INSERT INTO `colors`(`name`) values('red'),('blue'),('black');
+            INSERT INTO `colors`(`name`) VALUES('red'),('blue'),('black');
         ");
     }
 
@@ -35,6 +34,6 @@ class CreateColorsTableWithDefaultValues extends Migration
      */
     public function down()
     {
-        \DB::statement("DROP TABLE `colors`;");
+        \DB::statement('DROP TABLE `colors`;');
     }
 }
