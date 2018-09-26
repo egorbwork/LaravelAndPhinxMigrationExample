@@ -12,14 +12,14 @@ class CreateColorsTableWithDefaultValues extends AbstractMigration
         /**
          * SQL statement execution example
          */
-        $this->execute("
+        $this->execute('
             CREATE TABLE `colors`(
                 `id` INT(11) NOT NULL AUTO_INCREMENT,
                 `name` VARCHAR(100) NOT NULL,
                 PRIMARY KEY(`id`)
             )
             ENGINE=InnoDB;
-        ");
+        ');
         $this->execute("
             INSERT INTO `colors`(`name`) values('red'),('blue'),('black');
         ");
@@ -30,6 +30,6 @@ class CreateColorsTableWithDefaultValues extends AbstractMigration
      */
     public function down()
     {
-        $this->execute("DROP TABLE `colors`;");
+        $this->execute('DROP TABLE `colors`;');
     }
 }

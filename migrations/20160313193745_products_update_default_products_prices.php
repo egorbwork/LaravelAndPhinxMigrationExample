@@ -12,7 +12,7 @@ class ProductsUpdateDefaultProductsPrices extends AbstractMigration
         /**
          * Update example
          */
-        $this->execute("UPDATE `products` SET `price` = `price` + 10 WHERE (`price` < 100);");
+        $this->execute('UPDATE `products` SET `price` = `price` + 10 WHERE (`price` < 100);');
     }
 
     /**
@@ -23,6 +23,6 @@ class ProductsUpdateDefaultProductsPrices extends AbstractMigration
         /**
          * Update example
          */
-        $this->execute("UPDATE `products` SET `price` = `price` - 10 WHERE (`price` < 110);");
+        $this->execute('UPDATE `products` SET `price` = `price` - 10 WHERE (`price` < 110);');
     }
 }

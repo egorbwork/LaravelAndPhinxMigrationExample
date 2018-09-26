@@ -13,8 +13,8 @@ class AlterProductsChangeColumnTechDetails extends AbstractMigration
          * Change and Rename Column example
          */
         $table = $this->table('products');
-        $table->changeColumn("tech_details", "string", array("limit" => 255));
-        $table->renameColumn("tech_details", "technical_details");
+        $table->changeColumn('tech_details', 'string', ['limit' => 255]);
+        $table->renameColumn('tech_details', 'technical_details');
         $table->save();
     }
 
@@ -24,8 +24,8 @@ class AlterProductsChangeColumnTechDetails extends AbstractMigration
     public function down()
     {
         $table = $this->table('products');
-        $table->changeColumn("technical_details", "string", array("limit" => 100));
-        $table->renameColumn("technical_details", "tech_details");
+        $table->changeColumn('technical_details', 'string', ['limit' => 100]);
+        $table->renameColumn('technical_details', 'tech_details');
         $table->save();
     }
 }

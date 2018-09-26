@@ -1,5 +1,6 @@
 <?php
 
+use Phinx\Db\Adapter\AdapterInterface;
 use Phinx\Migration\AbstractMigration;
 
 class CreatePasswordResetsTable extends AbstractMigration
@@ -27,12 +28,12 @@ class CreatePasswordResetsTable extends AbstractMigration
      */
     public function change()
     {
-        $table = $this->table('password_resets', array('id' => false));
-        $table->addColumn('email', 'string')
-              ->addColumn('token', 'string')
-              ->addColumn('created_at', 'timestamp')
-              ->addIndex(array('email'))
-              ->addIndex(array('token'))
+        $table = $this->table('password_resets', ['id' => false]);
+        $table->addColumn('email', AdapterInterface::PHINX_TYPE_STRING)
+              ->addColumn('token', AdapterInterface::PHINX_TYPE_STRING)
+              ->addColumn('created_at', AdapterInterface::PHINX_TYPE_TIMESTAMP)
+              ->addIndex(['email'])
+              ->addIndex(['token'])
               ->create();
     }
 }

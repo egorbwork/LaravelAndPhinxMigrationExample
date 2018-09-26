@@ -31,7 +31,7 @@ class AlterProductsAddColumnTechDetails extends AbstractMigration
          * Add Column example using change method
          */
         $table = $this->table('products');
-        $table->addColumn("tech_details", "string", array("length" => 100));
+        $table->addColumn('tech_details', 'string', ['length' => 100]);
         $table->update();
     }
     
@@ -44,7 +44,7 @@ class AlterProductsAddColumnTechDetails extends AbstractMigration
 //         * Add Column example using up method
 //         */
 //        $table = $this->table('products');
-//        $table->addColumn("tech_details", "string", array("length" => 100));
+//        $table->addColumn('tech_details', 'string', ['length' => 100]);
 //        $table->save();
 //    }
 //
@@ -57,7 +57,7 @@ class AlterProductsAddColumnTechDetails extends AbstractMigration
 //         * Drop Column example using down method
 //         */
 //        $table = $this->table('products');
-//        $table->removeColumn("tech_details");
+//        $table->removeColumn('tech_details');
 //        $table->save();
 //    }
 }

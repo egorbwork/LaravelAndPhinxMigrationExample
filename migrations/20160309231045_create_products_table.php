@@ -32,10 +32,10 @@ class CreateProductsTable extends AbstractMigration
          */
         $table = $this->table('products');
         $table->addColumn('name', 'string')
-              ->addColumn('description', 'string', array("null" => true))
+              ->addColumn('description', 'string', ['null' => true])
               ->addColumn('price', 'decimal')
-              ->addColumn('created_at', 'timestamp', array("null" => true))
-              ->addColumn('updated_at', 'timestamp', array("null" => true))
+              ->addColumn('created_at', 'timestamp', ['null' => true])
+              ->addColumn('updated_at', 'timestamp', ['null' => true])
               ->create();
     }
     
@@ -49,10 +49,10 @@ class CreateProductsTable extends AbstractMigration
 //         */
 //        $table = $this->table('products');
 //        $table->addColumn('name', 'string')
-//              ->addColumn('description', 'string', array("null" => true))
+//              ->addColumn('description', 'string', ['null' => true])
 //              ->addColumn('price', 'decimal')
-//              ->addColumn('created_at', 'timestamp', array("null" => true))
-//              ->addColumn('updated_at', 'timestamp', array("null" => true))
+//              ->addColumn('created_at', 'timestamp', ['null' => true])
+//              ->addColumn('updated_at', 'timestamp', ['null' => true])
 //              ->save();
 //    }
 //
