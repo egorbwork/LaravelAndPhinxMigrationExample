@@ -37,6 +37,6 @@ class CreateProductsColorsTableWithDefaultValuesForProducts extends AbstractMigr
     public function down()
     {
         $table = $this->table('products_colors');
-        $table->drop();
+        $table->drop()->save();
     }
 }
