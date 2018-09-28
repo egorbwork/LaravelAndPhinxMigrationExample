@@ -64,7 +64,7 @@ class CreateProductsTable extends AbstractMigration
 //        /**
 //         * Drop Table example using down method
 //         */
-//        $this->dropTable('products');
+//        $this->table('products')->drop()->save();
 //    }
     
     
